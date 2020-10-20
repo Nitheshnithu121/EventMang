@@ -2,7 +2,9 @@ package com.example.eventmang;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
@@ -71,6 +73,25 @@ public class RegisterEvent extends AppCompatActivity {
                 Userhelperforeventreg userhelperforeventreg=new Userhelperforeventreg(name,email,phone,event,location);
                 reference.child(name).setValue(userhelperforeventreg);
                 Toast.makeText(RegisterEvent.this,"Event Conformed",Toast.LENGTH_SHORT).show();
+
+                //adding events to google calender
+
+                Intent intent=new Intent(Intent.ACTION_INSERT);
+                intent.setData(CalendarContract.Events.CONTENT_URI);
+                intent.putExtra(CalendarContract.Events.TITLE,event_spinner.getSelectedItem().toString());
+                intent.putExtra(CalendarContract.Events.EVENT_LOCATION,location_spinner.getSelectedItem().toString());
+                //intent.putExtra(CalendarContract.Events.DESCRIPTION,name.getText().toString());
+                intent.putExtra(CalendarContract.Events.ALL_DAY,true);
+                intent.putExtra(Intent.EXTRA_EMAIL,"nitheshinvenger@gmail.com,nitheshnithu121@gmail.com");
+
+                if(intent.resolveActivity(getPackageManager())!=null){
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(RegisterEvent.this,"No Supportive App",Toast.LENGTH_SHORT).show();
+                }
+
+
+
 
             }
         });
