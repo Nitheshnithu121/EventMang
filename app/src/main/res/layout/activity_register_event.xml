@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".RegisterEvent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/back_image2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Turning Ideas into Action"
+            android:textColor="@color/colorPrimary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Here"
+            android:textSize="20sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+            <LinearLayout
+                android:id="@+id/layout_username2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/background_input"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_accoun"
+                    app:tint="#131eea" />
+
+                <EditText
+                    android:id="@+id/signup_username2"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@null"
+                    android:hint="John Smith"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="41dp"
+                android:background="@color/colorWhite"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="Name"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/layout_username2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/layout_username2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+            <LinearLayout
+                android:id="@+id/layout_email2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_input"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_email"
+                    app:tint="#131eea" />
+
+                <EditText
+                    android:id="@+id/signup_email2"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@null"
+                    android:hint="your@mail.com"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="41dp"
+                android:background="@color/colorWhite"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="Email"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/layout_email2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/layout_email2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+            <LinearLayout
+                android:id="@+id/layout_phone2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_input"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_phone"
+                    app:tint="#131eea" />
+
+                <EditText
+                    android:id="@+id/signup_phone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@null"
+                    android:hint="(+91)90000009"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="41dp"
+                android:background="@color/colorWhite"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="Phone"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/layout_phone2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/layout_phone2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+            <LinearLayout
+                android:id="@+id/layout_event2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_input"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_event"
+                    app:tint="#131eea" />
+                
+                <Spinner
+                    android:id="@+id/event_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"/>
+
+                
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="41dp"
+                android:background="@color/colorWhite"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="Event Name"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/layout_event2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/layout_event2"
+                tools:ignore="NotSibling" />
+
+            
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp">
+
+            <LinearLayout
+                android:id="@+id/layout_location2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background_input"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_location"
+                    app:tint="#131eea" />
+
+                <Spinner
+                    android:id="@+id/location_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"/>
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="41dp"
+                android:background="@color/colorWhite"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="Location"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/layout_location2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/layout_location2"
+                tools:ignore="NotSibling" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="60dp"
+            android:text="Agree  User Agreement, its Privacy Policy."
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/button_lock"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/primary_button_background"
+            android:text="Lock Event"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="events">
+        <item>Hash Coding</item>
+        <item>Algorithm Decryption</item>
+        <item>Encoding and Decoding</item>
+        <item>Smart Technology 2021</item>
+        <item>Data Transfer</item>
+        <item>Human Robot</item>
+        <item>Source Coe</item>
+
+    </string-array>
+
+    <string-array name="location">
+        <item>Bangalore</item>
+        <item>Mangalore</item>
+        <item>Mysore</item>
+        <item>Huballi</item>
+        <item>Udupi</item>
+        <item>Moodbidri</item>
+        <item>Manipal</item>
+    </string-array>
+
+</resources>
