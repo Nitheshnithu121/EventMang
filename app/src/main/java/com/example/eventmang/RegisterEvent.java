@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class RegisterEvent extends AppCompatActivity {
     private Spinner event_spinner,location_spinner;
     private EditText user_name,user_email,user_phone;
     private Button lock;
+    ImageView back;
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
@@ -52,6 +54,13 @@ public class RegisterEvent extends AppCompatActivity {
         user_email=findViewById(R.id.signup_email2);
         user_phone=findViewById(R.id.signup_phone2);
         lock=findViewById(R.id.button_lock);
+
+        back.findViewById(R.id.back_image2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         lock.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,7 +125,6 @@ public class RegisterEvent extends AppCompatActivity {
             return true;
         }
     }
-
 
     private boolean validateEmail() {
         String val = user_email.getText().toString().trim();
