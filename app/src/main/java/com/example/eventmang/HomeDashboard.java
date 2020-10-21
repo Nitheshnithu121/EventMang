@@ -6,11 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class HomeDashboard extends AppCompatActivity {
 
     LinearLayout cs;
+    ImageView profile;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,17 @@ public class HomeDashboard extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(HomeDashboard.this,EventDetails.class);
                 startActivity(intent);
+            }
+        });
+
+        //user profile
+
+        profile=findViewById(R.id.menu_image);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2=new Intent(HomeDashboard.this,UserProfile.class);
+                startActivity(intent2);
             }
         });
     }

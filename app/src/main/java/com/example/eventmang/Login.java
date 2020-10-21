@@ -23,6 +23,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
 
@@ -123,14 +129,67 @@ public class Login extends AppCompatActivity {
                 }
                 validate(login_user_email.getText().toString(),login_password.getText().toString());
 
+                //user profile data popup
+                //isUser();
+
+
 
 
             }
         });
 
-
     }
-    //Validation for user
+
+    //Validation and getting values from firebase database to display user information
+    /*private void isUser()
+    {
+
+        final String userEnteredEmail=login_user_email.getText().toString().trim();
+        final String userEnteredPassword=login_password.getText().toString().trim();
+
+        DatabaseReference reference= FirebaseDatabase.getInstance().getReference("users");
+
+        Query checkUser=reference.orderByChild("email").equalTo(userEnteredEmail);
+
+        checkUser.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String passwordFromDB=dataSnapshot.child(userEnteredEmail).child("password").getValue(String.class);
+
+                if(dataSnapshot.exists()){
+
+                    if(passwordFromDB.equals(userEnteredPassword)){
+
+                        String nameFromDB=dataSnapshot.child(userEnteredEmail).child("name").getValue(String.class);
+                        String emailFromDB=dataSnapshot.child(userEnteredEmail).child("email").getValue(String.class);
+                        String phoneFromDB=dataSnapshot.child(userEnteredEmail).child("phone").getValue(String.class);
+                        String password1FromDB=dataSnapshot.child(userEnteredEmail).child("password").getValue(String.class);
+
+                        Intent intent=new Intent(getApplicationContext(),UserProfile.class);
+
+                        intent.putExtra("name",nameFromDB);
+                        intent.putExtra("email",emailFromDB);
+                        intent.putExtra("phone",phoneFromDB);
+                        intent.putExtra("password",password1FromDB);
+
+                        startActivity(intent);
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(Login.this,databaseError.getMessage(),Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+    }*/
+
+
+    //Validation for user using firebase Auth
 
     private void validate(String userEmail,String userPassword){
 
@@ -143,7 +202,7 @@ public class Login extends AppCompatActivity {
                 if(task.isSuccessful()){
                     progressDialog.dismiss();
                     Toast.makeText(Login.this,"Login Successful",Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(Login.this,HomeDashboard.class));
+                    startActivity(new Intent(Login.this,UserProfile.class));
                 }else{
                     progressDialog.dismiss();
                     Toast.makeText(Login.this,"Login Unsuccessful",Toast.LENGTH_SHORT).show();
