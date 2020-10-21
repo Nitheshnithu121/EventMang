@@ -87,6 +87,7 @@
                     android:layout_height="55dp"
                     android:background="@null"
                     android:hint="John Smith"
+                    android:enabled="false"
                     android:imeOptions="actionNext"
                     android:importantForAutofill="no"
                     android:inputType="text"
@@ -159,6 +160,7 @@
                     android:imeOptions="actionNext"
                     android:importantForAutofill="no"
                     android:inputType="text"
+                    android:enabled="false"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
                     android:textColor="@color/colorTextPrimary"
@@ -225,6 +227,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/profile_share"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="41dp"
@@ -277,6 +280,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/profile_rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="41dp"

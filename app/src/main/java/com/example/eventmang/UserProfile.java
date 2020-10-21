@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 public class UserProfile extends AppCompatActivity {
     ImageView back;
+    TextView share,rate_us;
+
 
 
 
@@ -28,6 +30,24 @@ public class UserProfile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //Share application option
+        share=findViewById(R.id.profile_share);
+
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent shareintent=new Intent();
+                shareintent.setAction(Intent.ACTION_SEND);
+                shareintent.putExtra(Intent.EXTRA_TEXT,"Please share this application");
+                shareintent.setType("text/plain");
+                startActivity(Intent.createChooser(shareintent,"Share via"));
+
+            }
+        });
+
+
 
 
 
