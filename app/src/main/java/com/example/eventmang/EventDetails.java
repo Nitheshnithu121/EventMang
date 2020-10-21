@@ -16,6 +16,11 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.ibrahimsn.lib.OnItemSelectedListener;
+import me.ibrahimsn.lib.SmoothBottomBar;
+
+import static com.example.eventmang.R.id.menuSearch;
+
 public class EventDetails extends AppCompatActivity {
     ImageView register_event;
 
@@ -25,6 +30,14 @@ public class EventDetails extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_event_details);
 
+        //For menu click
+
+        //SmoothBottomBar smoothBottomBar=findViewById(R.id.bottom_bar);
+
+
+
+
+        //Animation view of events
         register_event=findViewById(R.id.register_event_image);
 
         register_event.setOnClickListener(new View.OnClickListener() {
