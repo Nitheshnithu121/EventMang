@@ -32,8 +32,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="Welcome..."
+        android:layout_marginEnd="10dp"
+        android:text="Welcome...                                   Register"
         android:textColor="#FFF"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -41,6 +41,8 @@
         app:layout_constraintEnd_toStartOf="@id/profile_image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/profile_image"/>
+
+
     
     <TextView
         android:id="@+id/comp_slogan"
