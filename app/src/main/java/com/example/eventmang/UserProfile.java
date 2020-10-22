@@ -3,9 +3,11 @@ package com.example.eventmang;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -46,6 +48,21 @@ public class UserProfile extends AppCompatActivity {
 
             }
         });
+
+        //Rate us option
+        rate_us=findViewById(R.id.profile_rate);
+        rate_us.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent playstore=new Intent("android.intent.action.VIEW", Uri.parse("https://play.google.com/"));
+                startActivity(playstore);
+            }
+        });
+
+
+
+
+
 
 
 

@@ -74,7 +74,7 @@ public class RegisterEvent extends AppCompatActivity {
 
                 Userhelperforeventreg userhelperforeventreg=new Userhelperforeventreg(name,email,phone,event,location);
                 reference.child(name).setValue(userhelperforeventreg);
-                Toast.makeText(RegisterEvent.this,"Event Conformed",Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterEvent.this,"Last Step to Conform Event",Toast.LENGTH_SHORT).show();
 
                 //adding events to google calender
 
@@ -89,8 +89,12 @@ public class RegisterEvent extends AppCompatActivity {
                 if(intent.resolveActivity(getPackageManager())!=null){
                     startActivity(intent);
                 }else {
-                    Toast.makeText(RegisterEvent.this,"No Supportive App",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterEvent.this,"No Supportive App", Toast.LENGTH_SHORT).show();
                 }
+
+
+                //Intent payment_intent=new Intent(RegisterEvent.this,Payment.class);
+                //startActivity(payment_intent);
 
 
 

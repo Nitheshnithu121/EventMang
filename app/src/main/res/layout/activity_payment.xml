@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Payment">
+
+    <ImageView
+        android:id="@+id/image_heading"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:src="@drawable/paymentbg"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="150dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/image_heading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Go online"
+            android:textColor="@color/colorWhite"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="Save more than what you spend"
+            android:textColor="#ff4f00"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+
+
+    </LinearLayout>
+    <View
+        android:id="@+id/view_support"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/image_heading"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/login_background"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_support">
+
+        <ImageView
+            android:id="@+id/payment_qr"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="152dp"
+            android:layout_marginEnd="149dp"
+            android:foregroundGravity="center_vertical"
+            android:src="@drawable/paymentqrcode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:hint="Name"
+            android:textStyle="bold"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:paddingStart="60dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/payment_qr"
+            tools:ignore="Autofill"/>
+
+        <View
+            android:id="@+id/view_divider_name"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/colorTextHint"
+            app:layout_constraintTop_toBottomOf="@id/input_name" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_accoun"
+            app:layout_constraintBottom_toBottomOf="@id/input_name"
+            app:layout_constraintStart_toStartOf="@id/input_name"
+            app:tint="@color/colorTextHint" />
+
+        <EditText
+            android:id="@+id/input_upi_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:hint="UPI ID"
+            android:textStyle="bold"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:paddingStart="60dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/view_divider_name"
+            tools:ignore="Autofill"/>
+
+        <View
+            android:id="@+id/view_divider_upi_name"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/colorTextHint"
+            app:layout_constraintTop_toBottomOf="@id/input_upi_name"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_upipin"
+            app:layout_constraintBottom_toBottomOf="@id/input_upi_name"
+            app:layout_constraintStart_toStartOf="@id/input_upi_name"
+            app:tint="@color/colorTextHint" />
+
+        <EditText
+            android:id="@+id/input_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:hint="Pay Amount"
+            android:textStyle="bold"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:paddingStart="60dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/view_divider_upi_name"
+            tools:ignore="Autofill"/>
+
+        <View
+            android:id="@+id/view_divider_amount"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/colorTextHint"
+            app:layout_constraintTop_toBottomOf="@id/input_amount"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_money"
+            app:layout_constraintBottom_toBottomOf="@id/input_amount"
+            app:layout_constraintStart_toStartOf="@id/input_amount"
+            app:tint="@color/colorTextHint"/>
+
+        <CheckBox
+            android:id="@+id/payment_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="40dp"
+            android:text="Agree  User Agreement, its Privacy Policy."
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_divider_amount"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/payment_here_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="123dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="170dp"
+            android:layout_marginBottom="57dp"
+            android:background="@drawable/primary_button_background"
+            android:text="Pay Here"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/payment_checkbox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

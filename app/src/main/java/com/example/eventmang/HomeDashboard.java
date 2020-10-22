@@ -4,15 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 public class HomeDashboard extends AppCompatActivity {
 
     LinearLayout cs;
-    ImageView profile;
+    ImageView profile,do_payment;
 
 
     @Override
@@ -38,6 +40,17 @@ public class HomeDashboard extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent2=new Intent(HomeDashboard.this,UserProfile.class);
                 startActivity(intent2);
+            }
+        });
+
+        //Add to google calender
+        do_payment=findViewById(R.id.add_to_caleneder);
+        do_payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent payment=new Intent(HomeDashboard.this,Payment.class);
+                startActivity(payment);
+
             }
         });
     }

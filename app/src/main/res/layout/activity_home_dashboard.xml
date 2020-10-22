@@ -55,16 +55,16 @@
 
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/white_rectangle_background"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/menu_image">
+            app:layout_constraintTop_toBottomOf="@id/menu_image"
+            tools:layout_editor_absoluteX="25dp">
 
 
             <EditText
@@ -91,6 +91,19 @@
 
 
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/add_to_caleneder"
+            android:layout_width="43dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toStartOf="@+id/menu_image"
+            app:layout_constraintStart_toEndOf="@+id/text_username"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/budget" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
