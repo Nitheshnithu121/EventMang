@@ -2,7 +2,9 @@ package com.example.eventmang;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.CalendarContract;
@@ -15,6 +17,9 @@ import android.widget.Toast;
 public class Payment extends AppCompatActivity {
     EditText user_name,upi_id,amount;
     Button pay_here;
+    Uri uri;
+    static String u_name,u_id,u_amount;
+    static final String GPAY_PACKAGE_NAME="com.google.android.apps.nbu.paisa.user";
 
 
 
@@ -40,11 +45,15 @@ public class Payment extends AppCompatActivity {
                 }
                 //Directing to google pay
 
-                String u_name=user_name.getText().toString().trim();
-                String u_id=upi_id.getText().toString().trim();
-                String u_amount=amount.getText().toString().trim();
+                 u_name=user_name.getText().toString().trim();
+                 u_id=upi_id.getText().toString().trim();
+                 u_amount=amount.getText().toString().trim();
 
-                payUsingUpi(u_name,u_id,u_amount);
+                 //payUsingUpi(u_name,u_id,u_amount);
+
+                uri=getUpiPaymentUri(u_name,u_id,u_amount);
+                payWithGpay(GPAY_PACKAGE_NAME);
+
 
 
 
@@ -55,9 +64,44 @@ public class Payment extends AppCompatActivity {
 
     }
 
-    void payUsingUpi(String name,String upi_id,String amount){
+    private static Uri getUpiPaymentUri(String name,String upi_id,String amount){
+        return new Uri.Builder()
+                .scheme("upi")
+                .authority("pay")
+                .appendQueryParameter("pa",upi_id)
+                .appendQueryParameter("pn",name)
+                .appendQueryParameter("am",amount)
+                .build();
+
+    }
+    private void payWithGpay(String packageName){
+        if(isAppInstalled(this,packageName)){
+            Intent intent=new Intent(Intent.ACTION_VIEW);
+            intent.setData(uri);
+            intent.setPackage(packageName);
+            startActivityForResult(intent,0);
+        }else{
+            Toast.makeText(Payment.this,"Google pay not installed",Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
+
+    public static boolean isAppInstalled(Context context,String packageName){
+        try{
+            context.getPackageManager().getApplicationInfo(packageName,0);
+            return true;
+
+        }catch (PackageManager.NameNotFoundException e){
+            return false;
+        }
+
+
+    }
+
+   /* void payUsingUpi(String name,String upi_id,String amount){
         String GOOGLE_PAY_PACKAGE_NAME="com.google.android.apps.nbu.paisa.user";
-        int GOOGLE_PAY_REQUEST_CODE=123;
+        int GOOGLE_PAY_REQUEST_CODE=0;
 
         Uri uri=new Uri.Builder()
                 .scheme("upi")
@@ -74,7 +118,7 @@ public class Payment extends AppCompatActivity {
 
 
 
-    }
+    }*/
 
     private boolean validateName() {
         String val = user_name.getText().toString().trim();
