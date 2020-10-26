@@ -44,11 +44,11 @@
 
         <ImageView
             android:id="@+id/menu_image"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
-            android:src="@drawable/profile"
+            android:src="@drawable/creditcard"
             app:layout_constraintBottom_toBottomOf="@id/text_hello"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/text_hello" />
@@ -92,18 +92,7 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/add_to_caleneder"
-            android:layout_width="43dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="54dp"
-            android:layout_marginBottom="6dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-            app:layout_constraintEnd_toStartOf="@+id/menu_image"
-            app:layout_constraintStart_toEndOf="@+id/text_username"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/creditcard" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

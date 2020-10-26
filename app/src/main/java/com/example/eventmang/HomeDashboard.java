@@ -32,19 +32,10 @@ public class HomeDashboard extends AppCompatActivity {
             }
         });
 
-        //user profile
 
-        profile=findViewById(R.id.menu_image);
-        profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent2=new Intent(HomeDashboard.this,UserProfile.class);
-                startActivity(intent2);
-            }
-        });
 
         //Add to google calender
-        do_payment=findViewById(R.id.add_to_caleneder);
+        do_payment=findViewById(R.id.menu_image);
         do_payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

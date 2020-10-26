@@ -56,6 +56,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(Login.this,Signup.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -136,7 +137,7 @@ public class Login extends AppCompatActivity {
 
     //Validation for user using firebase Auth
 
-    private void validate(String userEmail,String userPassword){
+    private void validate(final String userEmail, final String userPassword){
 
         progressDialog.setMessage("Loading .............");
         progressDialog.show();
@@ -146,8 +147,15 @@ public class Login extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     progressDialog.dismiss();
+                    finish();
                     Toast.makeText(Login.this,"Login Successful",Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(Login.this,HomeDashboard.class));
+                    //startActivity(new Intent(Login.this,HomeDashboard.class));
+
+                    //User profile details
+                    Intent intent=new Intent(getApplicationContext(),UserProfile.class);
+                    intent.putExtra("email",userEmail);
+                    intent.putExtra("password",userPassword);
+                    startActivity(intent);
                 }else{
                     progressDialog.dismiss();
                     Toast.makeText(Login.this,"Login Unsuccessful",Toast.LENGTH_SHORT).show();

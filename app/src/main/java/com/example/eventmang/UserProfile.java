@@ -14,6 +14,9 @@ import android.widget.TextView;
 public class UserProfile extends AppCompatActivity {
     ImageView back;
     TextView share,rate_us;
+    String email,passwd;
+    EditText name,password;
+    TextView profile_email;
 
 
 
@@ -23,6 +26,20 @@ public class UserProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_user_profile);
+
+
+        //profile details
+        name=findViewById(R.id.profile_name);
+        profile_email=findViewById(R.id.user_profile_email);
+        password=findViewById(R.id.profile_phone);
+        Intent intent=getIntent();
+        email=intent.getStringExtra("email");
+        passwd=intent.getStringExtra("password");
+        name.setText(email);
+        password.setText(passwd);
+        profile_email.setText(email);
+
+
 
         back=findViewById(R.id.back_image3);
         back.setOnClickListener(new View.OnClickListener() {
