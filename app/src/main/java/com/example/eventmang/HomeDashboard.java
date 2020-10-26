@@ -27,7 +27,7 @@ public class HomeDashboard extends AppCompatActivity {
         cs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeDashboard.this,EventDetails.class);
+                Intent intent=new Intent(HomeDashboard.this,EventsBoard.class);
                 startActivity(intent);
             }
         });
