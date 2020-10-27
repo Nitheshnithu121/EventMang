@@ -34,11 +34,11 @@ public class RadarChart extends AppCompatActivity {
         visitorsForFirstWebsite.add(new RadarEntry(540));
         visitorsForFirstWebsite.add(new RadarEntry(660));
 
-        RadarDataSet radarDataSetForFirstWebsite=new RadarDataSet(visitorsForFirstWebsite,"Website 1");
+        RadarDataSet radarDataSetForFirstWebsite=new RadarDataSet(visitorsForFirstWebsite,"Code Hunt");
         radarDataSetForFirstWebsite.setColor(Color.RED);
         radarDataSetForFirstWebsite.setLineWidth(2f);
         radarDataSetForFirstWebsite.setValueTextColor(Color.RED);
-        radarDataSetForFirstWebsite.setValueTextSize(20f);
+        radarDataSetForFirstWebsite.setValueTextSize(14f);
 
         //Website 2
 
@@ -52,7 +52,7 @@ public class RadarChart extends AppCompatActivity {
         visitorsForSecondWebsite.add(new RadarEntry(440));
         visitorsForSecondWebsite.add(new RadarEntry(660));
 
-        RadarDataSet radarDataSetForSecondWebsite=new RadarDataSet(visitorsForSecondWebsite,"Website 2");
+        RadarDataSet radarDataSetForSecondWebsite=new RadarDataSet(visitorsForSecondWebsite,"Data Transfer");
         radarDataSetForSecondWebsite.setColor(Color.BLUE);
         radarDataSetForSecondWebsite.setLineWidth(2f);
         radarDataSetForSecondWebsite.setValueTextColor(Color.BLUE);
@@ -69,7 +69,7 @@ public class RadarChart extends AppCompatActivity {
         XAxis xAxis=radarChart.getXAxis();
         xAxis.setValueFormatter(new IndexAxisValueFormatter(labels));
 
-        radarChart.getDescription().setText("Radar Chart Representation of Events");
+        radarChart.getDescription().setText("Radar Chart Representation of Users attended the events");
         radarChart.setData(radarData);
 
 

@@ -26,12 +26,12 @@ public class BarChart extends AppCompatActivity {
 
         ArrayList<BarEntry> visitors = new ArrayList<>();
         visitors.add(new BarEntry(2014, 420));
-        visitors.add(new BarEntry(2015, 475));
-        visitors.add(new BarEntry(2016, 508));
-        visitors.add(new BarEntry(2017, 660));
+        visitors.add(new BarEntry(2015, 479));
+        visitors.add(new BarEntry(2016, 503));
+        visitors.add(new BarEntry(2017, 669));
         visitors.add(new BarEntry(2018, 550));
         visitors.add(new BarEntry(2019, 630));
-        visitors.add(new BarEntry(2020, 470));
+        visitors.add(new BarEntry(2020, 747));
 
         BarDataSet barDataSet = new BarDataSet(visitors, "Events");
         barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
@@ -42,7 +42,7 @@ public class BarChart extends AppCompatActivity {
 
         barChart.setFitBars(true);
         barChart.setData(barData);
-        barChart.getDescription().setText("Bar Chart Representation of Events");
+        barChart.getDescription().setText("Bar Chart Representation of New User");
         barChart.animateY(2000);
 
 

@@ -24,13 +24,13 @@ public class PieChart extends AppCompatActivity {
         com.github.mikephil.charting.charts.PieChart pieChart=findViewById(R.id.pieChart);
 
         ArrayList<PieEntry> visitors=new ArrayList<>();
-        visitors.add(new PieEntry(508,2016));
-        visitors.add(new PieEntry(600,2017));
-        visitors.add(new PieEntry(750,2018));
-        visitors.add(new PieEntry(600,2019));
-        visitors.add(new PieEntry(670,2020));
+        visitors.add(new PieEntry(50,2016));
+        visitors.add(new PieEntry(60,2017));
+        visitors.add(new PieEntry(75,2018));
+        visitors.add(new PieEntry(60,2019));
+        visitors.add(new PieEntry(57,2020));
 
-        PieDataSet pieDataSet=new PieDataSet(visitors,"Pie Chart Representation of Events");
+        PieDataSet pieDataSet=new PieDataSet(visitors,"Pie Chart Representation of Scheduled Events");
         pieDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
         pieDataSet.setValueTextColor(Color.BLACK);
         pieDataSet.setValueTextSize(20f);
