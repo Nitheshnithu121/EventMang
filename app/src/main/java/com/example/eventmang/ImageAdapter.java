@@ -22,8 +22,7 @@ public class ImageAdapter extends PagerAdapter {
     }
 
     private int[] imageSlide=new int[]{
-            R.drawable.dashboardimg1,R.drawable.dashboardimg3,R.drawable.dashboardimg4,R.drawable.ec2,R.drawable.ec3,R.drawable.ec4,
-            R.drawable.eco1,R.drawable.eco4,R.drawable.mech1
+            R.drawable.dashboardimg1,R.drawable.dashboardimg3,R.drawable.dashboardimg4,R.drawable.ec2,R.drawable.ec3,R.drawable.ec4,R.drawable.eco1,R.drawable.eco4
     };
 
     @Override

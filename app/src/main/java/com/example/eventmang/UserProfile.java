@@ -16,7 +16,7 @@ public class UserProfile extends AppCompatActivity {
     TextView share,rate_us;
     String email,passwd;
     EditText name,password;
-    TextView profile_email;
+    TextView profile_email,graph;
 
 
 
@@ -26,6 +26,18 @@ public class UserProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_user_profile);
+
+        //Graph view
+
+        graph=findViewById(R.id.profile_graph);
+
+        graph.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(UserProfile.this,Graph.class);
+                startActivity(intent);
+            }
+        });
 
 
         //profile details
@@ -47,6 +59,7 @@ public class UserProfile extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(UserProfile.this,HomeDashboard.class);
                 startActivity(intent);
+                finish();
             }
         });
 

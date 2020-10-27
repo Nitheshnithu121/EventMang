@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class HomeDashboard extends AppCompatActivity {
 
     LinearLayout cs;
-    ImageView profile,do_payment;
+    ImageView do_payment;
 
 
     @Override

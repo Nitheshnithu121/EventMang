@@ -22,6 +22,7 @@ public class RegisterEvent extends AppCompatActivity {
     private Spinner event_spinner,location_spinner;
     private EditText user_name,user_email,user_phone;
     private Button lock;
+    ImageView back;
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
@@ -33,6 +34,16 @@ public class RegisterEvent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_register_event);
+
+        back=findViewById(R.id.back_image2);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(RegisterEvent.this,EventsBoard.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         event_spinner=findViewById(R.id.event_spinner);
         location_spinner=findViewById(R.id.location_spinner);
