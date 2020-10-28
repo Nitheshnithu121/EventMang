@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Login">
 
+
     <ImageView
         android:id="@+id/image_heading"
         android:layout_width="match_parent"
@@ -13,7 +14,7 @@
         android:src="@drawable/loginimg"
         app:layout_constraintTop_toTopOf="parent"
         android:scaleType="centerCrop"/>
-    
+
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -22,8 +23,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/header"
         app:layout_constraintBottom_toBottomOf="@id/image_heading"/>
-    
-    
+
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +34,7 @@
         app:layout_constraintBottom_toBottomOf="@id/image_heading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -112,7 +113,7 @@
             android:layout_marginEnd="10dp"
             android:background="@color/colorTextHint"
             app:layout_constraintTop_toBottomOf="@id/input_email" />
-        
+
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
@@ -139,7 +140,7 @@
             android:textSize="15sp"
             app:layout_constraintTop_toBottomOf="@id/view_divider_email"
             tools:ignore="Autofill"/>
-        
+
         <View
             android:id="@+id/view_divider_password"
             android:layout_width="match_parent"
@@ -149,7 +150,7 @@
             android:layout_marginEnd="10dp"
             android:background="@color/colorTextHint"
             app:layout_constraintTop_toBottomOf="@id/input_password"/>
-        
+
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
@@ -158,8 +159,8 @@
             app:layout_constraintBottom_toBottomOf="@id/input_password"
             app:layout_constraintStart_toStartOf="@id/input_password"
             app:tint="@color/colorTextHint" />
-        
-        
+
+
         <Button
             android:id="@+id/button_login"
             android:layout_width="match_parent"
@@ -174,7 +175,7 @@
             android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/view_divider_password"/>
-        
+
         <TextView
             android:id="@+id/text_forgotpassword"
             android:layout_width="match_parent"
