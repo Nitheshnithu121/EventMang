@@ -12,7 +12,7 @@
         android:layout_height="280dp"
         android:src="@drawable/paymentbg"
         app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,8 +67,10 @@
             android:layout_height="80dp"
             android:layout_marginStart="152dp"
             android:layout_marginEnd="149dp"
+            android:layout_marginBottom="40dp"
             android:foregroundGravity="center_vertical"
             android:src="@drawable/paymentqrcode"
+            app:layout_constraintBottom_toTopOf="@+id/input_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
