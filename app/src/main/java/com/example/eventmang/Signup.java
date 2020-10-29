@@ -36,7 +36,8 @@ public class Signup extends AppCompatActivity {
         findViewById(R.id.back_image).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent1=new Intent(Signup.this,Login.class);
+                startActivity(intent1);
             }
         });
 
@@ -44,7 +45,8 @@ public class Signup extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                onBackPressed();
+                Intent intent2=new Intent(Signup.this,Login.class);
+                startActivity(intent2);
             }
         });
 

@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class HomeDashboard extends AppCompatActivity {
 
     LinearLayout cs;
-    ImageView do_payment;
+    ImageView do_payment,logout;
 
 
     @Override
@@ -22,6 +22,15 @@ public class HomeDashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home_dashboard);
+
+        logout=findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent logout=new Intent(HomeDashboard.this,Login.class);
+                startActivity(logout);
+            }
+        });
 
         cs=findViewById(R.id.layoutCs);
         cs.setOnClickListener(new View.OnClickListener() {
